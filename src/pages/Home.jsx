@@ -7,41 +7,43 @@ import AboutSection from "../components/home/AboutSection";
 const Home = () => {
   return (
     <section className="bg-white min-h-screen overflow-y-auto custom-overflow-hidden pb-40">
-      <div className="flex flex-grow gap-3">
-        {/* Left Div */}
-        <div className="flex justify-center items-center ">
-          <div className="flex flex-col items-center justify-center m-30 ">
-            <h2 className="text-[#122620] text-2xl font-bold mb-4 px-2">
-              Quran Academy | Learn Quran online with expert tutors
-            </h2>
-            <p className="text-[#122620] text-lg text-center max-w-md mb-6 px-2">
-              Join the best Online Quran Academy to learn Quran online with
-              expert tutors. Get Islamic education from the comfort of your
-              home.
-            </p>
-            <div className="flex gap-4 mt-6 mb-10">
-              {/* Book Free Trial Button */}
-              <button className="flex items-center gap-2 border border-black text-black hover:bg-black hover:text-white px-6 py-2 rounded-md font-semibold transition duration-300 cursor-pointer">
-                <FaCalendarCheck />
-                Book Free Trial
-              </button>
+      <div className="bg-gradient-to-br from-[#F6F6F6] to-[#EDEDED] rounded-3xl shadow-2xl mx-4 md:mx-16 mt-10 mb-12 px-6 py-10">
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          {/* Left Div */}
+          <div className="flex-1 flex justify-center items-center">
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="text-[#122620] text-2xl md:text-4xl font-extrabold mb-4 text-center px-2 leading-tight">
+                Al-Hidayah Quran Academy | Learn Quran online with expert tutors
+              </h2>
+              <p className="text-[#333333] text-lg text-center max-w-md mb-6 px-2 leading-relaxed">
+                Join the best Online Quran Academy to learn Quran online with
+                expert tutors. Get Islamic education from the comfort of your
+                home.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mt-6 mb-10">
+                {/* Book Free Trial Button */}
+                <button className="flex items-center justify-center gap-2 border border-[#122620] text-[#122620] hover:bg-[#122620] hover:text-white px-6 py-2 rounded-lg font-semibold transition duration-300 cursor-pointer shadow-sm hover:shadow-md">
+                  <FaCalendarCheck />
+                  Book Free Trial
+                </button>
 
-              {/* Browse Courses Button */}
-              <button className="flex items-center gap-2 border border-black text-black hover:bg-black hover:text-white px-6 py-2 rounded-md font-semibold transition duration-300 cursor-pointer">
-                <FaBookOpen />
-                Browse Courses
-              </button>
+                {/* Browse Courses Button */}
+                <button className="flex items-center justify-center gap-2 border border-[#122620] text-[#122620] hover:bg-[#122620] hover:text-white px-6 py-2 rounded-lg font-semibold transition duration-300 cursor-pointer shadow-sm hover:shadow-md">
+                  <FaBookOpen />
+                  Browse Courses
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Right Div */}
-        <div className="w-full max-w-md group pt-20 pr-30">
-          <img
-            src={img1}
-            alt="Hero"
-            className="w-full h-[300px] md:h-[320px]  rounded-xl object-cover shadow-md transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:-translate-y-1 group-hover:shadow-lg"
-          />
+          {/* Right Div */}
+          <div className="flex-1 flex justify-center pt-10 md:pt-0">
+            <img
+              src={img1}
+              alt="Hero"
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md h-[280px] md:h-[320px] rounded-xl object-cover shadow-lg transition-transform duration-500 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-2xl"
+            />
+          </div>
         </div>
       </div>
 
@@ -91,10 +93,9 @@ const Home = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-center text-green-700 mb-6 mt-20 transition duration-300 hover:text-green-900">
         Online Quran Academy key features
       </h2>
-      
+
       <FeaturesGrid />
       <AboutSection />
-
 
       <BottomNav />
     </section>

@@ -3,49 +3,51 @@ import { FaHome, FaChalkboardTeacher, FaRegNewspaper } from "react-icons/fa";
 import { MdLibraryBooks } from "react-icons/md";
 import { TbCash } from "react-icons/tb";
 import { IoIosContact } from "react-icons/io";
-import { IoBookSharp } from "react-icons/io5";
 import { FiGift } from "react-icons/fi";
 import logo from "../../assets/images/logo.png";
+
 const Header = () => {
   return (
-    <header className="bg-[#000000] flex justify-start items-center gap-26 mt-4 px-8 py-1 shadow-lg ">
-      {/* Logo Section */}
-      <div className="flex items-center gap-3">
-        <img
-          src={logo}
-          alt="Al-Hidaya Logo"
-          className="w-16 h-16 object-contain transition-transform duration-300 ease-in-out hover:scale-110"
-        />
+    <header className="bg-black w-full mt-6 px-4 md:px-8 py-3 shadow-lg">
+      <div className="flex flex-col items-center justify-center gap-4">
+        {/* Logo and Title */}
+        <div className="flex items-center gap-3">
+          <img
+            src={logo}
+            alt="Al-Hidaya Logo"
+            className="w-14 h-14 object-contain transition-transform duration-300 hover:scale-110"
+          />
+          <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-[#F6F6F6] hover:text-green-400 transition duration-300 hover:drop-shadow-[0_0_6px_rgba(56,189,248,0.6)] hover:scale-105 cursor-pointer">
+            AL-HIDAYA QURAN ACADEMY
+          </h1>
+        </div>
 
-        <h1 className="text-xl font-bold text-[#F6F6F6] hover:text-green-400 transition duration-300 ease-in-out hover:drop-shadow-[0_0_6px_rgba(56,189,248,0.6)] hover:scale-105 cursor-pointer">
-          AL-HIDAYA QURAN ACADEMY
-        </h1>
-      </div>
-      {/* Navigation Links */}
-      <nav className="flex items-center justify-between flex-wrap gap-8 cursor-pointer ">
-        {[
-          { icon: <FaHome />, label: "Home" },
-          { icon: <FaChalkboardTeacher />, label: "Courses" },
-          { icon: <MdLibraryBooks />, label: "Library" },
-          { icon: <TbCash />, label: "Fee" },
-          { icon: <IoIosContact />, label: "Contact" },
-          { icon: <FiGift />, label: "Free Trial" },
-          { icon: <FaRegNewspaper />, label: "Blog" },
-        ].map((item, i) => (
-          <div
-            key={i}
-            className="relative group flex items-center gap-2 text-[#FEFAE0] font-semibold transition-all duration-300"
-          >
-            <div className="transition duration-300 group-hover:text-green-400">
-              {item.icon}
+        {/* Navigation Links */}
+        <nav className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
+          {[
+            { icon: <FaHome />, label: "Home" },
+            { icon: <FaChalkboardTeacher />, label: "Courses" },
+            { icon: <MdLibraryBooks />, label: "Library" },
+            { icon: <TbCash />, label: "Fee" },
+            { icon: <IoIosContact />, label: "Contact" },
+            { icon: <FiGift />, label: "Free Trial" },
+            { icon: <FaRegNewspaper />, label: "Blog" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="relative group flex items-center gap-2 text-[#FEFAE0] font-medium text-sm sm:text-base transition-all duration-300 cursor-pointer"
+            >
+              <div className="transition duration-300 group-hover:text-green-400">
+                {item.icon}
+              </div>
+              <span className="group-hover:text-green-400 transition-colors duration-300">
+                {item.label}
+              </span>
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-green-400 group-hover:w-full transition-all duration-300"></span>
             </div>
-            <span className="group-hover:text-green-400 transition-colors duration-300">
-              {item.label}
-            </span>
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-green-400 group-hover:w-full transition-all duration-300"></span>
-          </div>
-        ))}
-      </nav>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 };
