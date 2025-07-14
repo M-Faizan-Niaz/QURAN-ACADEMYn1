@@ -4,6 +4,8 @@ import { FaBookOpen, FaCalendarCheck } from "react-icons/fa";
 import img1 from "../assets/images/img1.png";
 import FeaturesGrid from "../components/home/FeaturesGrid";
 import AboutSection from "../components/home/AboutSection";
+import FloatingButtons from "../components/shared/FloatingButtons";
+import FaqAccordion from "../components/shared/FaqAccordion";
 const Home = () => {
   return (
     <section className="bg-white min-h-screen overflow-y-auto custom-overflow-hidden pb-40">
@@ -96,8 +98,10 @@ const Home = () => {
 
       <FeaturesGrid />
       <AboutSection />
+      <FaqAccordion />
 
       <BottomNav />
+      <FloatingButtons />
     </section>
   );
 };
