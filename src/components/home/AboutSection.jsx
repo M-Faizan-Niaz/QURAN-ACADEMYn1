@@ -12,7 +12,7 @@ const AboutSection = () => {
             alt="About Quran Academy"
             className="w-full  rounded-3xl shadow-lg"
           />
-          <div className="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 text-sm rounded-full shadow-md">
+          <div className="absolute top-4 left-4 bg-[#996515] text-white px-4 py-2 text-sm rounded-full shadow-md">
             Trusted by 1000+ Students
           </div>
         </div>
@@ -20,7 +20,7 @@ const AboutSection = () => {
         {/* Text Section */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-snug">
-            About <span className="text-green-600">Our Quran Academy</span>
+            About <span className="text-[#996515]">Our Quran Academy</span>
           </h2>
           <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
             Our mission is to make Quran education easily accessible to everyone
@@ -35,7 +35,7 @@ const AboutSection = () => {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-green-600 text-white px-6 py-3 rounded-full shadow-2xl hover:bg-green-700 transition duration-300"
+            className="inline-block bg-[#996515] text-white px-6 py-3 rounded-full shadow-2xl hover:bg-[#d4af37] transition duration-300"
           >
             Get Started Today
           </a>

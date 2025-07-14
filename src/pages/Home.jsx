@@ -1,4 +1,3 @@
-import React from "react";
 import BottomNav from "./../components/shared/BottomNav";
 import { FaBookOpen, FaCalendarCheck } from "react-icons/fa";
 import img1 from "../assets/images/img1.png";
@@ -6,7 +5,13 @@ import FeaturesGrid from "../components/home/FeaturesGrid";
 import AboutSection from "../components/home/AboutSection";
 import FloatingButtons from "../components/shared/FloatingButtons";
 import FaqAccordion from "../components/shared/FaqAccordion";
+
+import FreeTrialModal from "../components/home/FreeTrialModal";
+import { useNavigate } from "react-router-dom";
+
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-white min-h-screen overflow-y-auto custom-overflow-hidden pb-40">
       <div className="bg-gradient-to-br from-[#F6F6F6] to-[#EDEDED] rounded-3xl shadow-2xl mx-4 md:mx-16 mt-10 mb-12 px-6 py-10">
@@ -24,7 +29,10 @@ const Home = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6 mb-10">
                 {/* Book Free Trial Button */}
-                <button className="flex items-center justify-center gap-2 border border-[#122620] text-[#122620] hover:bg-[#122620] hover:text-white px-6 py-2 rounded-lg font-semibold transition duration-300 cursor-pointer shadow-sm hover:shadow-md">
+                <button
+                  onClick={() => navigate("/free-trial")}
+                  className="flex items-center justify-center gap-2 border border-[#122620] text-[#122620] hover:bg-[#122620] hover:text-white px-6 py-2 rounded-lg font-semibold transition duration-300 cursor-pointer shadow-sm hover:shadow-md"
+                >
                   <FaCalendarCheck />
                   Book Free Trial
                 </button>
@@ -55,7 +63,7 @@ const Home = () => {
         </div>
         <div className="bg-white rounded-2xl shadow-md p-6 transition-all duration-300 hover:shadow-xl hover:scale-105  cursor-pointer">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-4 relative inline-block">
-            <span className="relative z-10">Why Choose Us?</span>
+            <span className="relative z-10 text-[#122620]">Why Choose Us?</span>
             <span className="absolute left-0 bottom-0 w-full h-2 bg-[#10b981]/20 rounded-md -z-10"></span>
           </h2>
 
@@ -85,14 +93,14 @@ const Home = () => {
         Explore our full list of{" "}
         <a
           href="/courses"
-          className="text-green-600 font-semibold  hover:text-green-800 transition duration-300"
+          className="text-[#996515] font-semibold  hover:text-green-800 transition duration-300"
         >
           Quran courses online
         </a>{" "}
         to get started today
       </p>
 
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-green-700 mb-6 mt-20 transition duration-300 hover:text-green-900">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#996515] mb-6 mt-20 transition duration-300 hover:text-green-900">
         Online Quran Academy key features
       </h2>
 

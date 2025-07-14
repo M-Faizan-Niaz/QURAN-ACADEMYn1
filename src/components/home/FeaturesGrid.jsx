@@ -10,37 +10,37 @@ import { FaChalkboardTeacher } from "react-icons/fa";
 
 const features = [
   {
-    icon: <Ri24HoursLine className="text-4xl text-green-600" />,
+    icon: <Ri24HoursLine className="text-4xl text-[#996515]" />,
     title: "Learn Quran Online Easily With Flexible Schedule",
     description:
       "Take lessons anytime, anywhere. Our online Quran academy offers 24/7 availability for students to learn Islamic teachings at their convenience.",
   },
   {
-    icon: <MdOutlinePersonPin className="text-4xl text-green-600" />,
+    icon: <MdOutlinePersonPin className="text-4xl text-[#996515]" />,
     title: "Personalized Learning",
     description:
       "One-to-one classes ensure full attention from the teacher. This method improves learning speed and comprehension dramatically.",
   },
   {
-    icon: <BiSupport className="text-4xl text-green-600" />,
+    icon: <BiSupport className="text-4xl text-[#996515]" />,
     title: "Try Free Before You Start",
     description:
       "Book a free trial class to experience our teaching system. Contact us via email or WhatsApp to get started with no cost.",
   },
   {
-    icon: <FaChalkboardTeacher className="text-4xl text-green-600" />,
+    icon: <FaChalkboardTeacher className="text-4xl text-[#996515]" />,
     title: "Choose Your Teacher",
     description:
       "We offer both male and female tutors. You can pick the teacher that fits your needs, with detailed profiles to help you decide.",
   },
   {
-    icon: <MdOutlineTranslate className="text-4xl text-green-600" />,
+    icon: <MdOutlineTranslate className="text-4xl text-[#996515]" />,
     title: "Learn Quran Online in Your Own Language",
     description:
       "Multilingual tutors available for Urdu, Hindi, English, Arabic, and more — making Quran education accessible to everyone.",
   },
   {
-    icon: <MdDevices className="text-4xl text-green-600" />,
+    icon: <MdDevices className="text-4xl text-[#996515]" />,
     title: "Anywhere, Any Device",
     description:
       "All you need is a stable internet connection and a mobile or laptop. Learn Quran anytime, from anywhere in the world.",

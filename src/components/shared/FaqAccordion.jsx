@@ -82,7 +82,7 @@ const FaqAccordion = () => {
       }`}
     >
       <h2 className="text-3xl font-bold text-center mb-10 text-white">
-        Online Quran Academy <span className="text-[#967232]">(FAQs)</span>
+        Al-Hidayah Quran Academy <span className="text-[#967232]">(FAQs)</span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
