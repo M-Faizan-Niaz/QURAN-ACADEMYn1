@@ -38,7 +38,8 @@ const Home = () => {
                 </button>
 
                 {/* Browse Courses Button */}
-                <button className="flex items-center justify-center gap-2 border border-[#122620] text-[#122620] hover:bg-[#122620] hover:text-white px-6 py-2 rounded-lg font-semibold transition duration-300 cursor-pointer shadow-sm hover:shadow-md">
+                <button onClick={() => navigate("/courses")}
+                 className="flex items-center justify-center gap-2 border border-[#122620] text-[#122620] hover:bg-[#122620] hover:text-white px-6 py-2 rounded-lg font-semibold transition duration-300 cursor-pointer shadow-sm hover:shadow-md">
                   <FaBookOpen />
                   Browse Courses
                 </button>
