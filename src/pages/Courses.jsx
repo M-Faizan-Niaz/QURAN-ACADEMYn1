@@ -58,7 +58,7 @@ const courses = [
     rating: 5,
     description:
       "Focused and spiritual learning experience for anyone looking to memorize the 6 Kalmas of Islam.",
-    link: "/kalma-course",
+    link: "/6-kalma-course",
   },
   {
     icon: <FaPrayingHands className="text-4xl text-[#967232]" />,
@@ -74,7 +74,7 @@ const courses = [
     rating: 5,
     description:
       "It is a wish of Muslims to recite the Holy Quran with perfection and understanding. So, the Al-Hidayah Quran Academy is here to fulfil this wish. We offer a comprehensive Nazra Quran Course",
-    link: "/quran-memorization-course",
+    link: "/nazrah-quran-course",
   },
 ];
 

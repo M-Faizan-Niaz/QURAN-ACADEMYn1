@@ -19,6 +19,10 @@ import Header from "./components/shared/Header";
 import BottomNav from "./components/shared/BottomNav";
 import Namaz from "./pages/Namaz";
 import NooraniQaida from "./pages/NooraniQaida";
+import Hadith from "./pages/Hadith";
+import NazrahQuran from "./pages/NazrahQuran";
+import SixKalma from "./pages/SixKalma";
+import TajweedCourse from "./pages/TajweedCourse";
 
 const App = () => {
   return (
@@ -37,6 +41,10 @@ const App = () => {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/namaz-course" element={<Namaz />} />
         <Route path="/noorani-qaida-course" element={<NooraniQaida />} />
+        <Route path="/hadith-course" element={<Hadith />} />
+        <Route path="/nazrah-quran-course" element={<NazrahQuran />} />
+        <Route path="/6-kalma-course" element={<SixKalma />} />
+        <Route path="/tajweed-course" element={<TajweedCourse />} />
       </Routes>
 
       <BottomNav />
