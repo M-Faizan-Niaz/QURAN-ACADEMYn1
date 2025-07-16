@@ -7,14 +7,14 @@ const FreeTrialModal = () => {
   return (
     <>
       <div
-        className="min-h-screen flex items-center justify-center bg-black/90"
+        className="min-h-screen flex items-center justify-center bg-black/90 "
         style={{
           backgroundImage: `url(${bgImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="relative w-full max-w-lg mx-4 p-6  rounded-2xl backdrop-blur-md bg-white/10 border border-[#FFD700]/30 shadow-2xl text-white animate-fadeIn mb-90 mt-20 ">
+        <div className="relative w-full max-w-lg mx-4 p-6  rounded-2xl backdrop-blur-md bg-white/10 border border-black/30 shadow-2xl text-white animate-fadeIn mb-90 mt-20 ">
           {/* Title */}
           <h2 className="text-3xl font-bold text-center text-[#756300] mb-2">
             Book Free Trial Class

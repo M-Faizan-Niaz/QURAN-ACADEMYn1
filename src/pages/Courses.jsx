@@ -1,8 +1,65 @@
 import React from "react";
 import { FaPrayingHands, FaBookOpen, FaStar } from "react-icons/fa";
+import { BsSoundwave } from "react-icons/bs";
+import { RiNumber6 } from "react-icons/ri";
+import { GiScrollUnfurled } from "react-icons/gi";
+import { TbBook2 } from "react-icons/tb";
+import { GiOpenBook } from "react-icons/gi";
+import { FaRegBookmark } from "react-icons/fa";
+import { LuBookOpenCheck } from "react-icons/lu";
+
+
 import BottomNav from "../components/shared/BottomNav";
 
 const courses = [
+  {
+    icon: <FaPrayingHands className="text-4xl text-[#967232]" />,
+    title: "Namaz Course",
+    rating: 5,
+    description:
+      "Designed to help you learn and perfect your prayers. Namaz, or Salah, is one of the five pillars of Islam.",
+    link: "/namaz-course",
+  },
+  {
+    icon: <GiScrollUnfurled className="text-4xl text-[#967232]" />,
+    title: "Hadith Course",
+    rating: 5,
+    description:
+      "The Hadith Course at Al-Hidayah Quran Acadеmy is pеrfеct for anyone who wants to lеarn morе about thе sayings and actions of thе Prophеt Muhammad (PBUH).",
+    link: "/hadith-course",
+  },
+  {
+    icon: <BsSoundwave className="text-4xl text-[#967232]" />,
+    title: "Online Tajweed Course",
+    rating: 5,
+    description:
+      "Thе Tajweed Course at thе Al-Hidayah Quran Acadеmy is carеfully dеsignеd to tеach studеnts how to rеcitе thе Quran with accuracy and bеauty",
+    link: "/tajweed-course",
+  },
+  {
+    icon: <TbBook2 className="text-4xl text-[#967232]" />,
+    title: "Noorani Qaida Course",
+    rating: 5,
+    description:
+      "Learning the Quran and reciting it correctly is essential for every Muslim. At the Al-Hidayah Quran Academy, we are committed to helping you achieve accurate recitation of the Holy Quran through our comprehensive Noorani Qaida Course.",
+    link: "/noorani-qaida-course",
+  },
+  {
+    icon: <FaRegBookmark className="text-4xl text-[#967232]" />,
+    title: "Quran Memorization Course",
+    rating: 5,
+    description:
+      "Change your life by memorizing the Quran at Al-Hidayah Quran Academy. Our online Quran memorization program has personalized one on one teaching by experienced Hafiz teachers.",
+    link: "/quran-memorization-course",
+  },
+  {
+    icon: <RiNumber6 className="text-4xl text-[#967232]" />,
+    title: "6 Kalma Course",
+    rating: 5,
+    description:
+      "Focused and spiritual learning experience for anyone looking to memorize the 6 Kalmas of Islam.",
+    link: "/kalma-course",
+  },
   {
     icon: <FaPrayingHands className="text-4xl text-[#967232]" />,
     title: "Janaza (Funeral) Course",
@@ -12,77 +69,20 @@ const courses = [
     link: "/janaza",
   },
   {
-    icon: <FaBookOpen className="text-4xl text-[#967232]" />,
-    title: "Namaz Course",
+    icon: <LuBookOpenCheck className="text-4xl text-[#967232]" />,
+    title: "Nazra Quran Course",
     rating: 5,
     description:
-      "Designed to help you learn and perfect your prayers. Namaz, or Salah, is one of the five pillars of Islam.",
-    link: "/namaz",
-  },
-  {
-    icon: <FaBookOpen className="text-4xl text-[#967232]" />,
-    title: "6 Kalma Course",
-    rating: 5,
-    description:
-      "Focused and spiritual learning experience for anyone looking to memorize the 6 Kalmas of Islam.",
-    link: "/kalma",
-  },
-  {
-    icon: <FaBookOpen className="text-4xl text-[#967232]" />,
-    title: "Hadith Course",
-    rating: 5,
-    description:
-      "The Hadith Course at Al-Hidayah Quran Acadеmy is pеrfеct for anyone who wants to lеarn morе about thе sayings and actions of thе Prophеt Muhammad (PBUH).",
-    link: "/hadith",
-  },
-  {
-    icon: <FaBookOpen className="text-4xl text-[#967232]" />,
-    title: "Hadith Course",
-    rating: 5,
-    description:
-      "The Hadith Course at Al-Hidayah Quran Acadеmy is pеrfеct for anyone who wants to lеarn morе about thе sayings and actions of thе Prophеt Muhammad (PBUH).",
-    link: "/hadith",
-  },
-  {
-    icon: <FaBookOpen className="text-4xl text-[#967232]" />,
-    title: "Hadith Course",
-    rating: 5,
-    description:
-      "The Hadith Course at Al-Hidayah Quran Acadеmy is pеrfеct for anyone who wants to lеarn morе about thе sayings and actions of thе Prophеt Muhammad (PBUH).",
-    link: "/hadith",
-  },
-  {
-    icon: <FaBookOpen className="text-4xl text-[#967232]" />,
-    title: "Hadith Course",
-    rating: 5,
-    description:
-      "The Hadith Course at Al-Hidayah Quran Acadеmy is pеrfеct for anyone who wants to lеarn morе about thе sayings and actions of thе Prophеt Muhammad (PBUH).",
-    link: "/hadith",
-  },
-  {
-    icon: <FaBookOpen className="text-4xl text-[#967232]" />,
-    title: "Hadith Course",
-    rating: 5,
-    description:
-      "The Hadith Course at Al-Hidayah Quran Acadеmy is pеrfеct for anyone who wants to lеarn morе about thе sayings and actions of thе Prophеt Muhammad (PBUH).",
-    link: "/hadith",
-  },
-  {
-    icon: <FaBookOpen className="text-4xl text-[#967232]" />,
-    title: "Hadith Course",
-    rating: 5,
-    description:
-      "The Hadith Course at Al-Hidayah Quran Acadеmy is pеrfеct for anyone who wants to lеarn morе about thе sayings and actions of thе Prophеt Muhammad (PBUH).",
-    link: "/hadith",
+      "It is a wish of Muslims to recite the Holy Quran with perfection and understanding. So, the Al-Hidayah Quran Academy is here to fulfil this wish. We offer a comprehensive Nazra Quran Course",
+    link: "/quran-memorization-course",
   },
 ];
 
 const Courses = () => {
+  
   return (
     <section className="bg-black text-white py-16 px-4 sm:px-6 lg:px-20 pb-80 mt-10">
-      <h2 className="text-3xl font-bold text-center mb-12">
-        Our Courses
-      </h2>
+      <h2 className="text-3xl font-bold text-center mb-12">Our Courses</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {courses.map((course, index) => (
@@ -114,6 +114,7 @@ const Courses = () => {
             <div className="text-center">
               <a
                 href={course.link}
+
                 className="inline-block mt-2 px-4 py-2 border border-[#967232] text-[#967232] rounded hover:bg-[#967232] hover:text-black transition-all duration-300"
               >
                 Read More

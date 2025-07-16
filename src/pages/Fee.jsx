@@ -1,5 +1,7 @@
 import React from "react";
 import FAQSection from "../components/Fee/FAQsection";
+import { useNavigate } from "react-router-dom";
+
 
 const pricingPlans = [
   {
@@ -25,6 +27,7 @@ const pricingPlans = [
 ];
 
 const Fee = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-black text-white px-4 py-10 mt-20">
       {/* Heading */}
@@ -63,7 +66,10 @@ const Fee = () => {
             </div>
             <p className="text-center text-gray-700 mb-6">{plan.sessions}</p>
             <div className="flex justify-center">
-              <button className="bg-[#c49833] text-black font-semibold py-2 px-6 rounded-full hover:bg-[#e6c200] transition-all">
+              <button
+                onClick={() => navigate("/free-trial")}
+                className="bg-[#c49833] text-black font-semibold py-2 px-6 rounded-full hover:bg-[#e6c200] cursor-pointer transition-all"
+              >
                 Start Free Trial
               </button>
             </div>

@@ -6,7 +6,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Fee from "./pages/Fee";
-import ContactUs from "./pages/ContactUs";
+import ContactUs from "./pages/Contactus";
+
 import AboutUs from "./pages/AboutUs";
 import Library from "./pages/Library";
 import Teachers from "./pages/Teachers";
@@ -16,6 +17,8 @@ import FreeTrial from "./pages/FreeTrial";
 // Components
 import Header from "./components/shared/Header";
 import BottomNav from "./components/shared/BottomNav";
+import Namaz from "./pages/Namaz";
+import NooraniQaida from "./pages/NooraniQaida";
 
 const App = () => {
   return (
@@ -32,6 +35,8 @@ const App = () => {
         <Route path="/teachers" element={<Teachers />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/namaz-course" element={<Namaz />} />
+        <Route path="/noorani-qaida-course" element={<NooraniQaida />} />
       </Routes>
 
       <BottomNav />

@@ -1,11 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaHome, FaChalkboardTeacher, FaRegNewspaper } from "react-icons/fa";
-import { MdLibraryBooks } from "react-icons/md";
 import { TbCash } from "react-icons/tb";
 import { IoIosContact } from "react-icons/io";
 import { FiGift } from "react-icons/fi";
 import logo from "../../assets/images/logo.png";
+
+const navItems = [
+  { icon: <FaHome />, label: "Home", path: "/" },
+  { icon: <FaChalkboardTeacher />, label: "Courses", path: "/courses" },
+  { icon: <TbCash />, label: "Fee", path: "/fee" },
+  { icon: <FiGift />, label: "Free Trial", path: "/free-trial" },
+  { icon: <FaChalkboardTeacher />, label: "Teachers", path: "/teachers" },
+];
 
 const Header = () => {
   return (
@@ -25,28 +32,15 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 relative">
-          {/* Simple Links */}
-          {[
-            { icon: <FaHome />, label: "Home", path: "/" },
-            {
-              icon: <FaChalkboardTeacher />,
-              label: "Courses",
-              path: "/courses",
-            },
-            { icon: <MdLibraryBooks />, label: "Library", path: "/library" },
-            { icon: <TbCash />, label: "Fee", path: "/fee" },
-            { icon: <FiGift />, label: "Free Trial", path: "/free-trial" },
-            { icon: <FaRegNewspaper />, label: "Blog", path: "/blog" },
-            {
-              icon: <FaChalkboardTeacher />,
-              label: "Teachers",
-              path: "/teachers",
-            },
-          ].map((item, i) => (
+          {navItems.map((item, i) => (
             <NavLink
-              to={item.path}
               key={i}
-              className="relative group flex items-center gap-2 text-[#FEFAE0] font-medium text-sm sm:text-base transition-all duration-300"
+              to={item.path}
+              className={({ isActive }) =>
+                `relative group flex items-center gap-2 font-medium text-sm sm:text-base transition-all duration-300 ${
+                  isActive ? "text-[#c49833]" : "text-[#FEFAE0]"
+                }`
+              }
             >
               <div className="transition duration-300 group-hover:text-[#c49833]">
                 {item.icon}
@@ -68,13 +62,21 @@ const Header = () => {
             <div className="absolute top-full left-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transform transition-all duration-300 origin-top z-40">
               <NavLink
                 to="/contact-us"
-                className="block px-4 py-2 hover:bg-[#c49833] transition-colors duration-200 rounded-t-md"
+                className={({ isActive }) =>
+                  `block px-4 py-2 transition-colors duration-200 ${
+                    isActive ? "bg-[#c49833] text-white" : "hover:bg-[#c49833]"
+                  } rounded-t-md`
+                }
               >
                 Contact Us
               </NavLink>
               <NavLink
                 to="/about-us"
-                className="block px-4 py-2 hover:bg-[#c49833] transition-colors duration-200 rounded-b-md"
+                className={({ isActive }) =>
+                  `block px-4 py-2 transition-colors duration-200 ${
+                    isActive ? "bg-[#c49833] text-white" : "hover:bg-[#c49833]"
+                  } rounded-b-md`
+                }
               >
                 About Us
               </NavLink>
