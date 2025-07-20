@@ -23,6 +23,11 @@ import Hadith from "./pages/Hadith";
 import NazrahQuran from "./pages/NazrahQuran";
 import SixKalma from "./pages/SixKalma";
 import TajweedCourse from "./pages/TajweedCourse";
+import TafseerCourse from "./pages/TafseerCourse";
+import IjazahCourse from "./pages/IjazahQuran";
+import RehmaniQaida from "./pages/RehmaniQaida";
+import MadniQaida from "./pages/MadniQaida";
+import QuranMemorizationCourse from "./pages/QuranMemorization";
 
 const App = () => {
   return (
@@ -45,6 +50,11 @@ const App = () => {
         <Route path="/nazrah-quran-course" element={<NazrahQuran />} />
         <Route path="/6-kalma-course" element={<SixKalma />} />
         <Route path="/tajweed-course" element={<TajweedCourse />} />
+        <Route path="/tafseer-course" element={<TafseerCourse />} />
+        <Route path="/ijazah-course" element={<IjazahCourse />} />
+        <Route path="/rehmani-qaida-course" element={<RehmaniQaida />} />
+        <Route path="/madni-qaida-course" element={<MadniQaida />} />
+        <Route path="/quran-memorization-course" element={<QuranMemorizationCourse />} />
       </Routes>
 
       <BottomNav />
