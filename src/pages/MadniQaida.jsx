@@ -158,12 +158,12 @@ const MadniQaida = () => {
 
       {/* Word by Word Pronunciation */}
       <div className="mt-20 max-w-6xl mx-auto">
-        <h3 className="text-center text-3xl font-bold text-[#c49833] mb-10 tracking-wider">
-          Word by Word Pronunciation
-        </h3>
         <div className="flex flex-col lg:flex-row items-center gap-10">
           <div className="flex-1 text-gray-300">
-            <p className="mb-4">
+            <h3 className="text-center text-3xl font-bold text-[#c49833] mb-10 tracking-wider">
+              Word by Word Pronunciation
+            </h3>
+            <p className="mb-1">
               Our Word-by-Word mode is a revolutionary way to master the
               recitation of Quranic words. With clear audio, interactive
               visuals, and real-time feedback, students can develop a strong
