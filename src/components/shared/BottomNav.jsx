@@ -39,44 +39,69 @@ const BottomNav = () => {
           </h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="/namaz" className="hover:text-[#967232] transition">
+              <a
+                href="/namaz-course"
+                className="hover:text-[#967232] transition"
+              >
                 Namaz Course
               </a>
             </li>
+
             <li>
-              <a href="/arabic" className="hover:text-[#967232] transition">
-                Arabic Language Course
-              </a>
-            </li>
-            <li>
-              <a href="/hadith" className="hover:text-[#967232] transition">
+              <a
+                href="/hadith-course"
+                className="hover:text-[#967232] transition"
+              >
                 Hadith Course
               </a>
             </li>
             <li>
-              <a href="/tajweed" className="hover:text-[#967232] transition">
+              <a
+                href="/tajweed-course"
+                className="hover:text-[#967232] transition"
+              >
                 Online Tajweed Course
               </a>
             </li>
+
             <li>
               <a
-                href="/islamic-studies"
-                className="hover:text-[#967232] transition"
-              >
-                Islamic Studies Course
-              </a>
-            </li>
-            <li>
-              <a
-                href="/memorization"
+                href="/quran-memorization-course"
                 className="hover:text-[#967232] transition"
               >
                 Quran Memorization Course
               </a>
             </li>
             <li>
-              <a href="/noorani" className="hover:text-[#967232] transition">
+              <a
+                href="/noorani-qaida-course"
+                className="hover:text-[#967232] transition"
+              >
                 Noorani Qaida Course
+              </a>
+            </li>
+            <li>
+              <a
+                href="/madni-qaida-course"
+                className="hover:text-[#967232] transition"
+              >
+                Madni Qaida Course
+              </a>
+            </li>
+            <li>
+              <a
+                href="/rehmani-qaida-course"
+                className="hover:text-[#967232] transition"
+              >
+                Rehmani Qaida Course
+              </a>
+            </li>
+            <li>
+              <a
+                href="/6-kalma-course"
+                className="hover:text-[#967232] transition"
+              >
+                6 Kalma Course
               </a>
             </li>
           </ul>
@@ -89,37 +114,37 @@ const BottomNav = () => {
           </h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="/trial" className="hover:text-[#967232] transition">
+              <a href="/free-trial" className="hover:text-[#967232] transition">
                 Free Trial Quran Classes
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-[#967232] transition">
+              <a href="/about-us" className="hover:text-[#967232] transition">
                 About Us
               </a>
             </li>
             <li>
-              <a href="/privacy" className="hover:text-[#967232] transition">
+              <a href="/privacy-policy" className="hover:text-[#967232] transition">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="/terms" className="hover:text-[#967232] transition">
+              <a href="/terms-conditions" className="hover:text-[#967232] transition">
                 Terms And Conditions
               </a>
             </li>
             <li>
-              <a href="/pricing" className="hover:text-[#967232] transition">
+              <a href="/fee" className="hover:text-[#967232] transition">
                 Pricing Plans
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-[#967232] transition">
+              <a href="/contact-us" className="hover:text-[#967232] transition">
                 Contacts
               </a>
             </li>
             <li>
-              <a href="/online" className="hover:text-[#967232] transition">
+              <a href="/courses" className="hover:text-[#967232] transition">
                 Quran Courses Online
               </a>
             </li>
@@ -134,17 +159,17 @@ const BottomNav = () => {
 
           <p className="text-sm flex items-center gap-2 mb-2">
             <i className="fas fa-envelope text-[#967232]"></i>
-            iqacademy92@gmail.com
+            mfaizan@gmail.com
           </p>
 
           <p className="text-sm flex items-center gap-2 mb-2">
             <i className="fas fa-phone text-[#967232]"></i>
-            +92-314-5851717
+            +92-341-2517905
           </p>
 
           <p className="text-sm flex items-center gap-2 mb-4">
             <i className="fab fa-whatsapp text-green-400"></i>
-            +1-409-9417108
+          +923412517905
           </p>
 
           <div className="flex space-x-4 text-lg">

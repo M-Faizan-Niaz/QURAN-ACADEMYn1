@@ -34,7 +34,7 @@ const AboutSection = () => {
             — anytime, anywhere.
           </p>
           <a
-            href="/contact"
+            href="/contact-us"
             className="inline-block bg-[#996515] text-white px-6 py-3 rounded-full shadow-2xl hover:bg-[#d4af37] transition duration-300"
           >
             Get Started Today

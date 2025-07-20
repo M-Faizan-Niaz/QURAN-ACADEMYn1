@@ -28,6 +28,8 @@ import IjazahCourse from "./pages/IjazahQuran";
 import RehmaniQaida from "./pages/RehmaniQaida";
 import MadniQaida from "./pages/MadniQaida";
 import QuranMemorizationCourse from "./pages/QuranMemorization";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 
 const App = () => {
   return (
@@ -54,7 +56,12 @@ const App = () => {
         <Route path="/ijazah-course" element={<IjazahCourse />} />
         <Route path="/rehmani-qaida-course" element={<RehmaniQaida />} />
         <Route path="/madni-qaida-course" element={<MadniQaida />} />
-        <Route path="/quran-memorization-course" element={<QuranMemorizationCourse />} />
+        <Route
+          path="/quran-memorization-course"
+          element={<QuranMemorizationCourse />}
+        />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
 
       <BottomNav />
