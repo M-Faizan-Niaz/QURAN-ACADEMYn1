@@ -6,7 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Fee from "./pages/Fee";
-import ContactUs from "./pages/Contactus";
+import ContactUs from "./pages/ContactUs";
 
 import AboutUs from "./pages/AboutUs";
 import Library from "./pages/Library";
