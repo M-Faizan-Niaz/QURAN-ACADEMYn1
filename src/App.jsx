@@ -7,16 +7,11 @@ import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Fee from "./pages/Fee";
 import ContactUs from "./pages/ContactUs";
-
 import AboutUs from "./pages/AboutUs";
 import Library from "./pages/Library";
 import Teachers from "./pages/Teachers";
 import Courses from "./pages/Courses";
 import FreeTrial from "./pages/FreeTrial";
-
-// Components
-import Header from "./components/shared/Header";
-import BottomNav from "./components/shared/BottomNav";
 import Namaz from "./pages/Namaz";
 import NooraniQaida from "./pages/NooraniQaida";
 import Hadith from "./pages/Hadith";
@@ -31,11 +26,16 @@ import QuranMemorizationCourse from "./pages/QuranMemorization";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 
+// Components
+import Header from "./components/shared/Header";
+import BottomNav from "./components/shared/BottomNav";
+import Signup from "./components/auth/Signup";
+import Login from "./components/auth/Login";
+
 const App = () => {
   return (
     <Router>
       <Header />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
@@ -62,8 +62,11 @@ const App = () => {
         />
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      </Routes>
 
+        {/* Auth Routes */}
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <BottomNav />
     </Router>
   );
