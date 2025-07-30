@@ -1,97 +1,121 @@
-import React from "react";
-import { FaTimes } from "react-icons/fa";
+import React, { useState } from "react";
+import axios from "axios";
 import bgImg from "../../assets/images/bg.png";
 
-
 const FreeTrialModal = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    whatsappNumber: "",
+    course: "",
+    timeZone: "",
+    country: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/v1/free-trial",
+        formData
+      );
+      alert("Free trial request submitted successfully!");
+    } catch (err) {
+      console.error("Error submitting form", err);
+      alert("Something went wrong!");
+    }
+  };
+
   return (
-    <>
-      <div
-        className="min-h-screen flex items-center justify-center bg-black/90 "
-        style={{
-          backgroundImage: `url(${bgImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="relative w-full max-w-lg mx-4 p-6  rounded-2xl backdrop-blur-md bg-white/10 border border-black/30 shadow-2xl text-white animate-fadeIn mb-90 mt-20 ">
-          {/* Title */}
-          <h2 className="text-3xl font-bold text-center text-[#756300] mb-2">
-            Book Free Trial Class
-          </h2>
-          <p className="text-sm text-center text-gray-200 mb-6">
-            Fill out the form and we’ll contact you shortly to schedule your
-            session.
-          </p>
-
-          {/* Form */}
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert(
-                "Form submitted! You can replace this with WhatsApp or Email logic."
-              );
-            }}
-            className="space-y-4"
+    <div
+      className="min-h-screen flex items-center justify-center bg-black/90"
+      style={{
+        backgroundImage: `url(${bgImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="relative w-full max-w-lg p-6 rounded-2xl backdrop-blur-md bg-white/10 border border-black/30 shadow-2xl text-white mt-20">
+        <h2 className="text-3xl font-bold text-center text-[#756300] mb-2">
+          Book Free Trial Class
+        </h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            name="name"
+            type="text"
+            placeholder="Your Name"
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 rounded-md bg-white/20 text-white"
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Email Address"
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 rounded-md bg-white/20 text-white"
+          />
+          <input
+            name="whatsappNumber"
+            type="text"
+            placeholder="WhatsApp Number"
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 rounded-md bg-white/20 text-white"
+          />
+          <select
+            name="course"
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 rounded-md bg-white/20 text-white"
           >
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full px-4 py-2 rounded-md bg-white/20 text-white placeholder-gray-300 border border-[#FFD700]/40 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full px-4 py-2 rounded-md bg-white/20 text-white placeholder-gray-300 border border-[#FFD700]/40 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
-              required
-            />
-            <input
-              type="text"
-              placeholder="WhatsApp Number"
-              className="w-full px-4 py-2 rounded-md bg-white/20 text-white placeholder-gray-300 border border-[#FFD700]/40 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
-              required
-            />
-            <select
-              className="w-full px-4 py-2 rounded-md bg-white/20 text-white border border-[#FFD700]/40 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
-              required
-            >
-              <option value="">Choose Course</option>
-              <option>Quran Reading Basics</option>
-              <option>Quran with Tajweed</option>
-              <option>Hifz (Memorization)</option>
-            </select>
-            <select
-              className="w-full px-4 py-2 rounded-md bg-white/20 text-white border border-[#FFD700]/40 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
-              required
-            >
-              <option value="">Select Time Zone</option>
-              <option>(GMT+5) Pakistan</option>
-              <option>(GMT+1) Europe</option>
-              <option>(GMT-5) USA</option>
-            </select>
-            <input
-              type="text"
-              placeholder="Country"
-              className="w-full px-4 py-2 rounded-md bg-white/20 text-white placeholder-gray-300 border border-[#FFD700]/40 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
-              required
-            />
-            <textarea
-              rows="3"
-              placeholder="Any message for us?"
-              className="w-full px-4 py-2 rounded-md bg-white/20 text-white placeholder-gray-300 border border-[#FFD700]/40 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
-            ></textarea>
+            <option value="">Choose Course</option>
+            <option>Quran Reading Basics</option>
+            <option>Quran with Tajweed</option>
+            <option>Hifz (Memorization)</option>
+          </select>
+          <select
+            name="timeZone"
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 rounded-md bg-white/20 text-white"
+          >
+            <option value="">Select Time Zone</option>
+            <option>(GMT+5) Pakistan</option>
+            <option>(GMT+1) Europe</option>
+            <option>(GMT-5) USA</option>
+          </select>
+          <input
+            name="country"
+            type="text"
+            placeholder="Country"
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 rounded-md bg-white/20 text-white"
+          />
+          <textarea
+            name="message"
+            placeholder="Any message for us?"
+            onChange={handleChange}
+            rows="3"
+            className="w-full px-4 py-2 rounded-md bg-white/20 text-white"
+          />
 
-            <button
-              type="submit"
-              className="w-full py-2 mt-4 bg-[#996515] text-white font-bold rounded-md hover:bg-black hover:text-[#996515] tracking-wider cursor-pointer transition duration-300 shadow-md"
-            >
-              SEND
-            </button>
-          </form>
-        </div>
+          <button
+            type="submit"
+            className="w-full py-2 mt-4 bg-[#996515] text-white font-bold rounded-md"
+          >
+            SEND
+          </button>
+        </form>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -31,9 +31,9 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 via-green-100 to-green-200 px-4">
-      <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-2xl">
-        <h2 className="text-3xl font-semibold text-center text-green-800 mb-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-zinc-900 to-neutral-800 px-4">
+      <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-2xl ">
+        <h2 className="text-3xl font-semibold text-center text-yellow-600 mb-6">
           Login to Quran Academy
         </h2>
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -44,7 +44,7 @@ const Login = () => {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
           <input
             name="password"
@@ -53,12 +53,12 @@ const Login = () => {
             required
             value={formData.password}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
           <button
             type="submit"
             disabled={loginMutation.isLoading}
-            className="w-full py-2 bg-green-600 hover:bg-green-700 text-white rounded-md transition duration-300"
+            className="w-full py-2 bg-yellow-600 hover:bg-yellow-700 text-white font-medium rounded-md transition duration-300"
           >
             {loginMutation.isLoading ? "Logging in..." : "Login"}
           </button>
@@ -67,7 +67,7 @@ const Login = () => {
           Don't have an account?{" "}
           <a
             href="/signup"
-            className="text-green-700 font-semibold hover:underline"
+            className="text-yellow-700 font-semibold hover:underline"
           >
             Sign up
           </a>

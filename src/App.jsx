@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // Pages
@@ -31,11 +36,17 @@ import Header from "./components/shared/Header";
 import BottomNav from "./components/shared/BottomNav";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
+import Dashboard from "./pages/DashBoard";
 
-const App = () => {
+const AppContent = () => {
+  const location = useLocation();
+
+  // Hide Header & BottomNav on these paths
+  const hideLayout = ["/signup", "/login"].includes(location.pathname);
+
   return (
-    <Router>
-      <Header />
+    <>
+      {!hideLayout && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
@@ -62,12 +73,19 @@ const App = () => {
         />
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-
-        {/* Auth Routes */}
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard/>} />
       </Routes>
-      <BottomNav />
+      {!hideLayout && <BottomNav />}
+    </>
+  );
+};
+
+const App = () => {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 };
